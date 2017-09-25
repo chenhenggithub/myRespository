@@ -6,22 +6,47 @@ package com.chen.niuke;
  */
 public class KP {
     public static void main(String[] args) {
-        int [] a={4,3,65,78,3,2,0};
+        int [] a={2,4,1,99,78,5,2,0,4,1,67};
         new KP().fastsort(a,0,a.length-1);
         for(int i:a){
             System.out.println(i);
         }
     }
 
-    public void fastsort(int []data,int low,int high){
+//    public void fastsort(int []data,int low,int high){
+//        int i=low;
+//        int j=high;
+//        boolean flag=false;
+//        while (i>=j){
+//            return;
+//        }
+//        while (i<j){
+//            if(data[i]>data[j]){
+//                int tamp=data[i];
+//                data[i]=data[j];
+//                data[j]=tamp;
+//                flag=!flag;
+//            }
+//            if(flag){
+//                i++;
+//            }else{
+//                j--;
+//            }
+//        }
+//        fastsort(data,low,--i);
+//        fastsort(data,++j,high);
+//
+//    }
+    public void fastsort(int[] data,int low,int high){
         int i=low;
         int j=high;
         boolean flag=false;
-        while (i>=j){
+        if(i>=j){
             return;
         }
-        while (i<j){
-            if(data[i]>data[j]){
+        while(i<j){
+//            从大到小
+            if(data[i]<data[j]){
                 int tamp=data[i];
                 data[i]=data[j];
                 data[j]=tamp;
@@ -37,5 +62,6 @@ public class KP {
         fastsort(data,++j,high);
 
     }
+
 
 }
