@@ -37,6 +37,7 @@ public class KP {
 //        fastsort(data,++j,high);
 //
 //    }
+
     public void fastsort(int[] data,int low,int high){
         int i=low;
         int j=high;
